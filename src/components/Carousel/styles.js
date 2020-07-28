@@ -39,9 +39,26 @@ export const VideoCardList = styled.ul`
   padding-bottom: 32px;
   list-style: none;
   display: flex;
-  overflow-x: auto;
   flex-direction: row;
+
+  overflow-x: auto;
   
+    ::-webkit-scrollbar{
+        height: 10px;
+        width: 10px;
+        background: gray;
+        border-radius: 5px;
+    };
+    ::-webkit-scrollbar-thumb:horizontal{
+        
+      background-color: #141414; 
+      border-radius: 5px;
+    }
+
+    
+    scroll-behavior:'smooth';
+    
+
   li {
     margin-right: 16px;
   }
@@ -52,4 +69,6 @@ export const VideoCardGroupContainer = styled.section`
   min-height: 197px;
   margin-left: 5%;
   margin-bottom: 16px;
+  background-color: var(--black);
+  
 `;

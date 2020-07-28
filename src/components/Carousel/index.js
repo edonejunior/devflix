@@ -12,6 +12,7 @@ function VideoCardGroup({
   const videos = category.videos;
   return (
     <VideoCardGroupContainer>
+      
       {categoryTitle && (
         <>
           <Title style={{ backgroundColor: categoryColor || 'red' }}>
@@ -24,7 +25,9 @@ function VideoCardGroup({
           }
         </>
       )}
+      
       <VideoCardList>
+     
         {videos.map((video, index) => {
           if (ignoreFirstVideo && index === 0) {
             return null;
@@ -40,7 +43,9 @@ function VideoCardGroup({
             </li>
           );
         })}
+      
       </VideoCardList>
+      
     </VideoCardGroupContainer>
   );
 }

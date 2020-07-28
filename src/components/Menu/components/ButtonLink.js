@@ -1,16 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {Link} from 'react-router-dom';
 
-function ButtonLink({ className, href, children }) {
+function ButtonLink({ className, to, children }) {
   return (
-    <a className={className} href={href}>
+    <Link className={className} to={to}>
       {children}
-    </a>
+    </Link>
   );
 }
 
 ButtonLink.defaultProps = {
-  href: '/',
+  to: '/',
   className: '',
 };
 
