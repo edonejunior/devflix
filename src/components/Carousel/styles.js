@@ -43,7 +43,7 @@ export const VideoCardList = styled.ul`
 
   overflow-x: auto;
   
-    ::-webkit-scrollbar{
+/*     ::-webkit-scrollbar{
         height: 10px;
         width: 10px;
         background: gray;
@@ -53,7 +53,7 @@ export const VideoCardList = styled.ul`
         
       background-color: #141414; 
       border-radius: 5px;
-    }
+    } */
 
     
     scroll-behavior:'smooth';
