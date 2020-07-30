@@ -6,7 +6,9 @@ import Carousel from '../../components/Carousel';
 import Footer from '../../components/Footer';
 
 function App() {
+
   return (
+    
     <div className="App">
       <Menu />
       <BannerMain 
@@ -20,7 +22,8 @@ function App() {
       category={dadosIniciais.categorias[0]}
       />
 
-      <Carousel 
+
+       <Carousel 
       ignoreFirstVideo
       category={dadosIniciais.categorias[1]}
       />
@@ -28,7 +31,7 @@ function App() {
       <Carousel 
       ignoreFirstVideo
       category={dadosIniciais.categorias[2]}
-      />
+      /> 
 
       <Footer />
     </div>

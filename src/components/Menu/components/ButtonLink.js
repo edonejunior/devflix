@@ -1,6 +1,10 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable react/jsx-filename-extension */
+/* eslint-disable linebreak-style */
+
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function ButtonLink({ className, to, children }) {
   return (
@@ -17,7 +21,7 @@ ButtonLink.defaultProps = {
 
 ButtonLink.propTypes = {
   className: PropTypes.string,
-  href: PropTypes.string,
+  to: PropTypes.string,
   children: PropTypes.node.isRequired,
 };
 
