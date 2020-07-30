@@ -81,24 +81,29 @@ function FormField({
   const isTextarea = type === 'textarea';
   const Tag = isTextarea ? 'textarea' : 'input';
 
+  const hasValue = value.length;
+
   return (
     <FormFieldWrapper>
 
-      <label
+      <Label
         htmlFor={idField}
       >
-        {label}
-        :
         <Input
           as={Tag}
           id={idField}
           type={type}
           name={name}
           value={value}
+          hasValue={hasValue}
           onChange={onChange}
 
         />
-      </label>
+        <Label.Text>
+          {label}
+          :
+        </Label.Text>
+      </Label>
     </FormFieldWrapper>
 
   );
