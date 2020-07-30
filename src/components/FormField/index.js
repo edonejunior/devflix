@@ -2,7 +2,7 @@ import React from 'react';
 
 // import { Container } from './styles';
 
-function FormField({ label, name, type , value, HandlerInput}) {
+function FormField({ label, name, type , value, onChange}) {
 
 
 
@@ -15,7 +15,7 @@ function FormField({ label, name, type , value, HandlerInput}) {
             type={type}
             name={name}
             value={value}
-            onChange={HandlerInput}
+            onChange={onChange}
 
         />
         </label>

@@ -25,11 +25,10 @@ function CadastroCategoria() {
   }
 
   function HandlerInput(info) {
-    const {getAttribute, value} = info.target;
 
-    setValue(
-      getAttribute('name'), 
-      value);
+       setValue(
+      info.target.getAttribute('name'), 
+      info.target.value); 
   }
 
 
