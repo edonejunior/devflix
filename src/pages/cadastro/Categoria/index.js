@@ -103,8 +103,8 @@ function CadastroCategoria() {
       <ul>
         {categorias.map((categoria) => (
           // eslint-disable-next-line react/no-array-index-key
-          <li key={`${categoria.nome}`}>
-            {categoria.nome}
+          <li key={`${categoria.id}`}>
+            {categoria.titulo}
           </li>
         ))}
       </ul>
