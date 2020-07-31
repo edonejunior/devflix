@@ -29,7 +29,27 @@ function getAllWithVideos() {
     });
 }
 
+function createCategory(objetoDoVideo) {
+  return fetch(`${URL_CATEGORIES}`, {
+    method: 'POST',
+    headers: {
+      'Content-type': 'application/json',
+    },
+    body: JSON.stringify(objetoDoVideo),
+  })
+    .then(async (respostaServer) => {
+      if (respostaServer.ok) {
+        const resposta = await respostaServer.json();
+
+        return resposta;
+      }
+
+      throw new Error('Não foi possível pegar os dados:(');
+    });
+}
+
 export default {
   getAllWithVideos,
   getAll,
+  createCategory,
 };

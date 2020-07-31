@@ -40,6 +40,11 @@
         "text": "Formação de Jogos na Alura",
         "url": "https://www.alura.com.br/cursos-online-front-end"
       }
+    },
+    {
+      "id": 7,
+      "titulo": "Clone UI",
+      "cor": "black"
     }
   ],
   "videos": [
@@ -210,6 +215,12 @@
       "url": "https://www.youtube.com/watch?v=jOAU81jdi-c",
       "categoriaId": 2,
       "id": 28
+    },
+    {
+      "titulo": "Video padrão",
+      "url": "https://www.youtube.com/watch?v=jOAU81jdi-c",
+      "categoriaId": 1,
+      "id": 29
     }
   ]
 }

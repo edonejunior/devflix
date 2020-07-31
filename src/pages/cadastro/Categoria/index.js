@@ -8,12 +8,17 @@ import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import useForm from '../../../hooks/useForm';
+import categoriasRepository from '../../../repositories/categorias';
 
 function CadastroCategoria() {
   const dadosIniciais = {
     nome: '',
-    descricao: '',
     cor: '',
+    link_extra: {
+      text: '',
+      url: '',
+    },
+
   };
 
   const { HandlerInput, values, clearForm } = useForm(dadosIniciais);
@@ -48,6 +53,15 @@ function CadastroCategoria() {
           ...categorias,
           values,
         ]);
+
+        categoriasRepository.createCategory({
+          titulo: values.nome,
+          cor: values.cor,
+          link_extra: {
+            text: values.descricao,
+            url: values.url,
+          },
+        });
 
         clearForm();
       }}
@@ -92,7 +106,7 @@ function CadastroCategoria() {
       <ul>
         {categorias.map((categoria) => (
           // eslint-disable-next-line react/no-array-index-key
-          <li key={`${categoria.titulo}`}>
+          <li key={`${categoria.id}`}>
             {categoria.titulo}
           </li>
         ))}
