@@ -29,7 +29,7 @@ function CadastroVideo() {
   }, []);
 
   const Button = styled.button`
-   color: var(--black);
+    /* color: var(--black); */
     border: 1px solid var(--white);
     box-sizing: border-box;
     cursor: pointer;
@@ -42,6 +42,8 @@ function CadastroVideo() {
     text-decoration: none;
     display: inline-block;
     transition: opacity .3s;
+    margin-top: 10px;
+    margin-bottom: 10px;
 `;
 
   return (
@@ -94,9 +96,9 @@ function CadastroVideo() {
 
       </form>
 
-      <Link to="/cadastro/categoria">
+      <Button as={Link} to="/cadastro/categoria">
         Cadastrar Categoria
-      </Link>
+      </Button>
 
     </PageDefault>
 

@@ -1,22 +1,23 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable import/extensions */
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Logo from '../../assets/img/Logo.png';
-import {Logotipo} from './styles.js'; 
-import ButtonLink from './components/ButtonLink'; 
+import { Logotipo } from './styles.js';
+import ButtonLink from './components/ButtonLink';
 import './Menu.css';
 
 function Menu() {
   return (
-  <nav className="Menu">
+    <nav className="Menu">
       <Link to="/">
-          <Logotipo className="Logo" alt="DevFlix" src={Logo} />
+        <Logotipo className="Logo" alt="DevFlix" src={Logo} />
       </Link>
 
       <ButtonLink as={Link} to="/cadastro/video" className="ButtonLink">Novo Vídeo</ButtonLink>
-  </nav>
-  
-  
-    );
+    </nav>
+
+  );
 }
 
 export default Menu;
